@@ -16,7 +16,7 @@ I kept forgetting which LeetCode problems to review, and other tools felt too bl
 
 ## Live Demo
 
-Try it here: [https://reaperggs.github.io/DART/](https://reaperggs.github.io/DART/)
+Try it here: [https://darttracker.netlify.app/](https://darttracker.netlify.app/)
 
 ## Tech Used
 
