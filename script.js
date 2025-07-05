@@ -142,6 +142,29 @@ function applySavedTheme() {
         document.getElementById("theme-toggle").innerText = "🌙";
     }
 }
+function addProblem() {
+    const problemNumber = document.getElementById("problemNumber").value.trim();
+    const today = new Date().toISOString().split('T')[0];
+
+    if (!problemNumber) {
+        alert("please enter a problem number.");
+        return;
+    }
+
+    const data = JSON.parse(localStorage.getItem("problems") || "[]");
+
+    // Check if problem number already exists
+    const exists = data.some(p => p.problemNumber === problemNumber);
+    if (exists) {
+        alert(`Problem #${problemNumber} already exists.`);
+        return;
+    }
+
+    data.push({ problemNumber, solvedDate: today });
+    localStorage.setItem("problems", JSON.stringify(data));
+
+    showAddProblem();
+}
 
 // Initial load
 applySavedTheme();
