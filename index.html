@@ -12,11 +12,25 @@
     <div id="app">
         <h2>daily algorithm revision tracker.</h2>
         <hr>
-        <button id="theme-toggle" onclick="toggleTheme()">🌙</button>
-        <div id="main-menu" class="menu">
+
+        <!-- Top right icons -->
+        <div style="position: absolute; top: 12px; right: 12px; display: flex; align-items: center; gap: 8px;">
+            <button id="theme-toggle" onclick="toggleTheme()">🌙</button>
         </div>
+
+        <div id="main-menu" class="menu"></div>
         <div id="content"></div>
+
+        <!-- Footer GitHub link -->
+        <footer style="margin-top: 40px; font-size: 14px;">
+            <p>
+                <a href="https://github.com/reaperggs/DART" target="_blank" style="text-decoration: none;">🔗
+                    View this project on GitHub</a>
+            </p>
+        </footer>
+
     </div>
+
     <script src="script.js"></script>
 </body>
 
