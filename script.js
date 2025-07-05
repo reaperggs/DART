@@ -2,13 +2,16 @@ const reviewIntervals = [1, 3, 7, 14];
 
 function showMainMenu() {
     document.getElementById("content").innerHTML = `
-      <div id="main-menu" class="button-group">
-        <button onclick="showAddProblem()">[ add problem ]</button>
-        <button onclick="showDueProblems()">[ today's due ]</button>
-        <button onclick="showAllProblems()">[ all problems ]</button>
-        <button onclick="clearAll()">[ clear all ]</button>
-      </div>
-    `;
+    <div id="main-menu" class="button-group">
+      <button onclick="showAddProblem()">[ add problem ]</button>
+      <button onclick="showDueProblems()">[ today's due ]</button>
+      <button onclick="showAllProblems()">[ all problems ]</button>
+      <button onclick="clearAll()">[ clear all ]</button>
+    </div>
+    <p class="disclaimer">
+      📌 Add problem numbers you solve. They’ll automatically resurface for review after <strong>1, 3, 7, and 14 days</strong> based on spaced repetition. All data stays in your browser.
+    </p>
+  `;
 }
 
 function showAddProblem() {
